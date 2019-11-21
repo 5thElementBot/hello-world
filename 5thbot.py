@@ -71,7 +71,7 @@ def handle_message(event):
            [TextSendMessage(text="Hello")])
 # flag any messages starting with a period for known nukebot commands
     elif msg.startswith('.'):
-       line_bot_api.multicast([5thID], #5th
+       line_bot_api.multicast(FifthID, #5thElement
                               TextSendMessage(text='A PROHIBITED COMMAND WAS TYPED!'))
        line_bot_api.push_message(group_id1,TextSendMessage(text='A PROHIBITED COMMAND WAS TYPED!'))#R4 Room
        line_bot_api.reply_message(
@@ -352,7 +352,7 @@ def handle_message(event):
 
 # implement Rally time feature
     if msg == 'rally time!':
-       line_bot_api.multicast([5thID, #5th
+       line_bot_api.multicast(FifthID, #5thElement
                               TextSendMessage(text='RALLY TIME GET ON NOW!!'))
        line_bot_api.push_message(group_id4,TextSendMessage(text='RALLY TIME GET ON NOW!!'))#group 1UP Family
        line_bot_api.push_message(group_id3,TextSendMessage(text='RALLY TIME GET ON NOW!!'))#1UpUv Rally Chat
